@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700');
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	margin: 0;
+	margin-left: 20px;
+}
+
+h1, h2 {
+	margin: .5em 0 .5em 0;
+}
+
+form {
+	margin: 1em 0 1em 0;
+	width: 750px;
+}
+
+fieldset {
+	margin: 1em 0 1em 0;
+	padding-top: 10px;
+	border: 1px dashed #999999;
+	border-radius: 2px;
+}
+
+fieldset h2 {
+	margin-top: 0;
+}
+
+input[type="radio"] {
+	margin: 0 .3em 0 0;
+	vertical-align: middle;
+}
+
+.key_word {
+	font-weight: 700;
+}
+
+label {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+select, option, input {
+	font-size: inherit;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+select, input {
+	border: 1px solid #999999;
+	border-radius: 2px;
+}
+
+select {
+	width: auto;
+	min-width: 30%;
+	box-sizing: border-box;
+}
+
+/* fieldset[id="preset_fieldset"] select {
+	display: block;
+	position: relative;
+	float: left;
+	margin-right: 3%;
+} */
+
+.parameter {
+	display: block;
+	position: relative;
+	float: left;
+	width: 50%;
+	margin-top: .2em;
+	height: 1.7em;
+}
+
+fieldset[id="parameters_fieldset"] h2 {
+	margin-bottom: .2em;
+}
+
+fieldset[id="parameters_fieldset"] .parameter {
+	display: flex;
+	width: 25%;
+	padding-right: 1em;
+	margin-top: .7em;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+fieldset[id="parameters_fieldset"] .parameter:nth-child(2),
+fieldset[id="parameters_fieldset"] .parameter:nth-child(6) {
+	width: 32%;
+}
+
+fieldset[id="parameters_fieldset"] .parameter:nth-child(3),
+fieldset[id="parameters_fieldset"] .parameter:nth-child(7) {
+	width: 18%;
+}
+
+fieldset[id="parameters_fieldset"] .parameter:nth-child(5) label,
+fieldset[id="parameters_fieldset"] .parameter:nth-child(9) label{
+	flex-basis: 25px;
+}
+
+fieldset[id="parameters_fieldset"] input[type="number"],
+fieldset[id="parameters_fieldset"] label,
+fieldset[id="parameters_fieldset"] select {
+	width: 34%;
+	vertical-align: middle;
+	margin-right: .3em;
+}
+
+fieldset[id="parameters_fieldset"] input[type="number"] {
+	flex-grow: 2;
+	text-align: center;
+}
+.wrong_number_format {
+	background-color: #FF6666;
+}
+
+fieldset[id="parameters_fieldset"] label {
+	flex-basis: 40px;
+}
+
+input[type="button"], input[type="reset"] {
+	width: 15%;
+	height: 1.7em;
+	display: block;
+	position: relative;
+	float: right;
+	font-weight: 700;
+}
+
+input[name="reset_button"] {
+	background-color: #FFCC33;
+	color: #333333;
+	margin-right: .7em;
+}
+
+input[name="calculate_button"] {
+	background-color: #66CC66;
+	color: #006600;
+}

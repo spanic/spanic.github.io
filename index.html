@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Решение основной задачи радиосвязи</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/script.js" defer></script>
+	</head>
+	<body>
+		<h1>Решение основной задачи радиосвязи</h1>
+		<p>Введите значения в соответствующие поля <!--или выберите готовый пресет--> и нажмите кнопку "Ответ"</p>
+		<form id="main_form">
+			<!-- <fieldset id="preset_fieldset">
+				<h2>Пресет:</h2>
+				<select id="generation_selector">
+					<option disabled selected>Выберите поколение</option>
+					<option value="1">Первое поколение (1G)</option>
+					<option value="2">Второе поколение (2G)</option>
+					<option value="3">Третье поколение (3G)</option>
+					<option value="4">Четвертое поколение (4G)</option>
+					<option value="5">Пятое поколение (5G)</option>
+				</select>
+				<select>
+					<option disabled selected>Выберите стандарт</option>
+					<option value="1">NMT (450 МГц)</option>
+					<option value="2">AMPS</option>
+					<option value="3">NMT (900 МГц)</option>
+				</select>
+			</fieldset> -->
+			<fieldset id="question_fieldset">
+				<h2>Искомое значение:</h2>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="transmitter_power" checked>
+					<label for="transmitter_power"><span class="key_word">P<sub>Tx</sub></span> (необходимая мощность передатчика);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="reciever_power">
+					<label for="reciever_power"><span class="key_word">P<sub>Rx</sub></span> (мощность сигнала на приёмнике);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="transmitter_loss">
+					<label for="transmitter_loss"><span class="key_word">μ<sub>Tx</sub></span> (коэфф. потерь в фидере передатчика);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="reciever_loss">
+					<label for="reciever_loss"><span class="key_word">μ<sub>Rx</sub></span> (коэфф. потерь в фидере приёмника);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="transmitter_gain">
+					<label for="transmitter_gain"><span class="key_word">G<sub>Tx</sub></span> (усиление антенны передатчика);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="reciever_gain">
+					<label for="reciever_gain"><span class="key_word">G<sub>Rx</sub></span> (усиление антенны приёмника);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="main_frequency">
+					<label for="main_frequency"><span class="key_word">F</span> (несущая частота);</label>
+				</div>
+				<div class="parameter">
+					<input type="radio" name="result_parameter" id="max_range">
+					<label for="max_range"><span class="key_word">R</span> (максимальное расстояние приёма);</label>
+				</div>
+			</fieldset>
+			<fieldset id="parameters_fieldset">
+				<h2>Параметры:</h2>
+				<div class="parameter">
+					<label for="transmitter_power"><span class="key_word">P<sub>Tx</sub></span> = </label>
+					<input type="number" name="transmitter_power" disabled>
+					<select class="unit_selector" name="transmitter_unit">
+						<option>Вт</option>
+						<option>дБ</option>
+						<option>дБм</option>
+					</select>
+				</div>
+				<div class="parameter">
+					<label for="transmitter_loss"><span class="key_word">μ<sub>Tx</sub></span> = </label>
+					<input type="number" name="transmitter_loss">
+				</div>
+				<div class="parameter">
+					<label for="transmitter_gain"><span class="key_word">G<sub>Tx</sub></span> = </label>
+					<input type="number" name="transmitter_gain"> (дБи)
+				</div>
+				<div class="parameter">
+					<label for="main_frequency"><span class="key_word">F</span> = </label>
+					<input type="number" name="main_frequency"> (МГц)
+				</div>
+				<div class="parameter">
+					<label for="reciever_power"><span class="key_word">P<sub>Rx</sub></span> = </label>
+					<input type="number" name="reciever_power">
+					<select class="unit_selector" name="reciever_unit">
+						<option>Вт</option>
+						<option>дБ</option>
+						<option>дБм</option>
+					</select>
+				</div>
+				<div class="parameter">
+					<label for="reciever_loss"><span class="key_word">μ<sub>Rx</sub></span> = </label>
+					<input type="number" name="reciever_loss">
+				</div>
+				<div class="parameter">
+					<label for="reciever_gain"><span class="key_word">G<sub>Rx</sub></span> = </label>
+					<input type="number" name="reciever_gain"> (дБи)
+				</div>
+				<div class="parameter">
+					<label for="max_range"><span class="key_word">R</span> = </label>
+					<input type="number" name="max_range"> (км)
+				</div>
+			</fieldset>
+			<input type="button" name="calculate_button" value="Ответ">
+			<input type="reset" name="reset_button" value="Сбросить">
+		</form>
+	</body>
+</html>

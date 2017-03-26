@@ -1,16 +1,11 @@
 'use strict';
 
-const /* PRESET_BOX = document.getElementById('preset_fieldset'),
-	GENERATION_SELECTOR = document.getElementById('generation_selector'), */
-
-	QUESTION_BOX = document.getElementById('question_fieldset'),
-	TARGET_VALUES = getInputFieldsByType(QUESTION_BOX, 'radio'),
-	
-	DEFAULT_TARGET_ID = 'transmitter_power',
+const DEFAULT_TARGET_ID = 'transmitter_power',
 	DEFAULT_TARGET = document.getElementById(DEFAULT_TARGET_ID),
 	FIELD_DISABLED_BY_DEFAULT = document.getElementsByName(DEFAULT_TARGET_ID)[0],
 
 	PARAMETERS_BOX = document.getElementById('parameters_fieldset'),
+	TARGET_VALUES = getInputFieldsByType(PARAMETERS_BOX, 'radio'),
 	PARAMETERS_FIELDS = getInputFieldsByType(PARAMETERS_BOX, 'number'),
 
 	UNIT_SELECTORS = document.getElementsByClassName('unit_selector'),

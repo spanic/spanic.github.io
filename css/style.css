@@ -2,41 +2,41 @@
 
 body {
 	font-family: 'PT Sans', sans-serif;
-	margin: 0;
-	margin-left: 20px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	width: 950px;
+	padding: 0 20px 0 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	margin: .5em 0 .5em 0;
 }
 
 form {
 	margin: 1em 0 1em 0;
-	width: 750px;
+	width: 100%;
 }
 
 fieldset {
-	margin: 1em 0 1em 0;
-	padding-top: 10px;
-	border: 1px dashed #999999;
-	border-radius: 2px;
+	padding: 0;
+	margin: 0 0 1em 0;
+	border: none;
 }
 
-fieldset h2 {
+fieldset h2, fieldset h3 {
 	margin-top: 0;
-}
-
-input[type="radio"] {
-	margin: 0 .3em 0 0;
-	vertical-align: middle;
 }
 
 .key_word {
 	font-weight: 700;
 }
 
+.green {
+	color: #006600;
+}
+
 label {
-	vertical-align: middle;
 	cursor: pointer;
 }
 
@@ -51,74 +51,62 @@ select, input {
 	border-radius: 2px;
 }
 
-select {
-	width: auto;
-	min-width: 30%;
+.parameters_group {
+	float: left;
+	background-color: whitesmoke;
 	box-sizing: border-box;
+	padding: .7em;
+	margin-right: .7em;
+	width: 26%;
+	border-radius: 2px;
 }
 
-/* fieldset[id="preset_fieldset"] select {
-	display: block;
-	position: relative;
-	float: left;
-	margin-right: 3%;
-} */
+.parameters_group:nth-child(3), .parameters_group:nth-child(5) {
+	width: 22.2%;
+}
+
+.parameters_group:nth-child(3) .parameter label {
+	flex-grow: .7;
+}
+
+.parameters_group:nth-child(3) .parameter input[type="number"] {
+	margin-right: 0;
+}
+
+.parameters_group:last-child {
+	margin-right: 0;
+}
 
 .parameter {
-	display: block;
-	position: relative;
-	float: left;
-	width: 50%;
-	margin-top: .2em;
-	height: 1.7em;
-}
-
-fieldset[id="parameters_fieldset"] h2 {
-	margin-bottom: .2em;
-}
-
-fieldset[id="parameters_fieldset"] .parameter {
-	display: flex;
-	width: 25%;
-	padding-right: 1em;
-	margin-top: .7em;
-	box-sizing: border-box;
+	display: inline-flex;
 	align-items: center;
+	margin-top: .2em;
+	height: 2em;
 }
 
-fieldset[id="parameters_fieldset"] .parameter:nth-child(2),
-fieldset[id="parameters_fieldset"] .parameter:nth-child(6) {
-	width: 32%;
+.parameter input[type="radio"] {
+	flex-basis: 10%;
+	margin: 0 .3em 0 0;
 }
 
-fieldset[id="parameters_fieldset"] .parameter:nth-child(3),
-fieldset[id="parameters_fieldset"] .parameter:nth-child(7) {
-	width: 18%;
+.parameter label {
+	flex-basis: 20%;
 }
 
-fieldset[id="parameters_fieldset"] .parameter:nth-child(5) label,
-fieldset[id="parameters_fieldset"] .parameter:nth-child(9) label{
-	flex-basis: 25px;
-}
-
-fieldset[id="parameters_fieldset"] input[type="number"],
-fieldset[id="parameters_fieldset"] label,
-fieldset[id="parameters_fieldset"] select {
-	width: 34%;
-	vertical-align: middle;
-	margin-right: .3em;
-}
-
-fieldset[id="parameters_fieldset"] input[type="number"] {
+.parameter input[type="number"] {
+	width: 40%;
 	flex-grow: 2;
+	margin-right: .3em;
 	text-align: center;
 }
-.wrong_number_format {
-	background-color: #FF6666;
+
+select {
+	box-sizing: border-box;
+	flex-basis: 25%;
 }
 
-fieldset[id="parameters_fieldset"] label {
-	flex-basis: 40px;
+.wrong_number_format {
+	background-color: #FF6666;
 }
 
 input[type="button"], input[type="reset"] {
@@ -127,6 +115,7 @@ input[type="button"], input[type="reset"] {
 	display: block;
 	position: relative;
 	float: right;
+	border: none;
 	font-weight: 700;
 }
 
